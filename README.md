@@ -3,8 +3,8 @@ Small repository to train how to make working javscript app repository
 
 # Goal of the Repo
 
-- [ ] Add hooks for the commits
-- [ ] building the npm scripts 
+- [X] Add hooks for the commits
+- [X] building the npm scripts 
 - [ ] Add simple todo list Js App
   - [ ] With mithril.js
   - [ ] With Next.js/React
