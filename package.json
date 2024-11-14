@@ -6,12 +6,19 @@
   "scripts": {
     "linuxhooks": "test -d .git && cd .git/hooks/ && curl -O https://raw.githubusercontent.com/pgailloud/git-emojis-hook/master/commit-msg && curl -O https://raw.githubusercontent.com/pgailoud/git-emojis-hook/master/prepare-commit-msg && chmod +x *",
     "winhooks": "if exist .git ( cd .git\\hooks\\ && wget https://raw.githubusercontent.com/pgailloud/git-emojis-hook/master/commit-msg && wget https://raw.githubusercontent.com/pgailoud/git-emojis-hook/master/prepare-commit-msg",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": ".\\node_modules\\.bin\\esbuild src/main.js --bundle --minify --sourcemap --outfile=scripts/app.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pgailloud/sandox-js-repo.git"
   },
   "author": "Pascal Gailloud",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "0.24.0"
+  },
+  "dependencies": {
+    "mithril": "^2.2.10"
+  }
 }
